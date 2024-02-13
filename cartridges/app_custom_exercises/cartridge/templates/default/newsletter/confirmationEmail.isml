@@ -1,0 +1,2 @@
+<h1> Thank you ${pdict.firstName}  ${pdict.lastName} for signing up!.  <h1>
+ Hope you will enjoy our newsletter !!!

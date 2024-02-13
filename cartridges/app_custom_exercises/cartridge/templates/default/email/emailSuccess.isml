@@ -1,0 +1,6 @@
+<!--- TEMPLATENAME: emailSuccess.isml --->
+<isdecorate template="common/layout/page">
+    <h3>
+        ${Resource.msgf("msg.newsletter.signup.thank.you_form","newsletter",null,pdict.email)}
+    </h3>
+</isdecorate>

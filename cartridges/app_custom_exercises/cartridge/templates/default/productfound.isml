@@ -1,0 +1,12 @@
+<html>
+    <body>
+
+    <isif condition=${pdict.myProduct}>
+        <h1>Product name is ${pdict.myProduct.productName}</h1>
+        <iselse>
+            <h1>No product found ${pdict.pid}</h1>
+    </isif>
+
+
+    </body>
+</html>

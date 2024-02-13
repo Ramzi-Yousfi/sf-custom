@@ -1,0 +1,11 @@
+<isdecorate template="common/layout/page">
+
+<h3>
+	${Resource.msgf("msg.newsletter.signup.thank.you_form","messageBundle",null,pdict.newsletterForm.fname.value,pdict.newsletterForm.lname.value)}
+</h3>
+
+
+
+Back to <a href="${URLUtils.url('Newsletter-Show')}">Newsletter Subscription</a>.
+
+</isdecorate>

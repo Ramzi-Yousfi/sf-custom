@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<form>
+    <field formid="email" label="label.input.newsletter.email" type="string" mandatory="true"
+           regexp="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
+           parse-error="error.message.parse.email"
+           value-error="error.message.parse.email"
+           max-length="50"/>
+    <action formid="valid" valid-form="true"/>
+</form>

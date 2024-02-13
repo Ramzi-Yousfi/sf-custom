@@ -1,0 +1,27 @@
+<!--- TEMPLATENAME: emailExist.isml --->
+<isdecorate template="common/layout/page">
+    <form class="form-control  w-100 vh-100" action="${URLUtils.url('Email-HandleForm')}" method="POST">
+        <div class="row justify-content-md-center">
+            <div class="form-group"
+            <isif condition="${pdict.email.mandatory === true}">required</isif>
+            >
+            <label class="form-control-label" for="email">
+                <isprint value="${pdict.emailForm.email.label}" encoding="htmlcontent" />
+            </label>
+            <iscomment> follow this example to complete your code</iscomment>
+            <input type="text" class="form-control" id="email"
+            <isprint value="${pdict.emailForm.email.attributes}" encoding="off" />
+            >
+            <div class="invalid-feedback"></div>
+            <div class="invalid-feedback"></div>
+            <isif condition="${pdict.emailerror!=null}">
+                <h3>${pdict.emailerror;}</h3>
+            </isif>
+            <button type="submit" name="valid" class="btn btn-primary">${Resource.msg('Submit');}</button>
+            <isif condition="${pdict.hello!=null}">
+                <h3>${pdict.hello;}</h3>
+            </isif>
+        </div>
+        </div>
+    </form>
+</isdecorate>

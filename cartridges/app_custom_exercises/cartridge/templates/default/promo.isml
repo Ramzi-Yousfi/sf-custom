@@ -1,0 +1,29 @@
+<isdecorate template="common/layout/page">
+
+<div class="jumbotron">
+	<h1>Hello Promo</h1>
+</div>
+
+<div class="row">
+	<div class="col-sm-12 bg-primary">
+		<iscomment>6-7: add content slot here</iscomment>
+	</div>
+</div>
+
+<div class="row">
+
+	<div class="col-sm-6 bg-info">
+    	<div class="p-4">
+    		 <isinclude template="promodescription" />
+    	</div>
+	</div>
+
+    <div class="col-sm-6 bg-success">
+    	<div class="p-4">
+    		 <iscomment>6-5: add remote include here</iscomment>
+      	</div>
+    </div>
+
+</div>
+
+</isdecorate>

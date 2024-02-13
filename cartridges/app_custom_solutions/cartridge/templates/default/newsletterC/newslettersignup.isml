@@ -1,0 +1,56 @@
+<isdecorate template="common/layout/page">
+	<isscript>
+<iscomment>Lab7-9 create a var assets pointing to assets.js</iscomment>
+	    var assets = require('*/cartridge/scripts/assets.js');
+		assets.addCss('/css/login.css');
+<iscomment>Lab7-9 in addition to addCss above, also addJs for the two js files under static/default</iscomment>
+	    assets.addJs('/js/clientValidationNewsletter.js');
+		assets.addJs('/js/messageDisplayer.js');
+	</isscript>
+    <div class="row justify-content-center equal-height">
+    	<div class="col-sm-8 col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="login-form-nav">
+						<form  actionserver="${pdict.actionUrl}" onsubmit="handleNewsletter()" method="POST" class="newsletter-form" <isprint value="${pdict.newsletterForm.attributes}" encoding="off" />>
+						   
+						   
+						    <div class="form-group required">
+						        <label class="form-control-label">
+						            <isprint value="${pdict.newsletterForm.fname.label}" encoding="htmlcontent" />
+						        </label>
+						        <input type="input" class="form-control" id="newsletter-form-fname" <isprint value="${pdict.newsletterForm.fname.attributes}" encoding="off" />>
+						        <div class="invalid-feedback"></div>
+						    </div>
+						    <div class="form-group required">
+								<label class="form-control-label">
+						            <isprint value="${pdict.newsletterForm.lname.label}" encoding="htmlcontent" />
+						        </label>
+						        <input type="input" class="form-control" id="newsletter-form-lname" <isprint value="${pdict.newsletterForm.lname.attributes}" encoding="off" />>
+						        <div class="invalid-feedback"></div>
+						    </div>
+						    <div class="form-group required">
+								<label class="form-control-label">
+						            <isprint value="${pdict.newsletterForm.email.label}" encoding="htmlcontent" />
+						        </label>
+						        <input type="input" class="form-control" id="newsletter-form-email" 
+								       <isprint value="${pdict.newsletterForm.email.attributes}" encoding="off"/>   
+									   data-pattern-mismatch="${Resource.msg('error.message.parse.email','forms',null)}" 
+									   data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+            						  data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
+
+									   >
+						        <div class="invalid-feedback"></div>
+						    </div>
+							<iscomment>check registerForm.isml for more validations</iscomment>
+							
+							
+						    <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}"/>
+	   						<button type="submit" class="btn btn-block btn-primary">${Resource.msg('button.form.emailsignup', 'homePage', null)}</button>
+						</form>    
+	            	</div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</isdecorate>
